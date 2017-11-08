@@ -2,7 +2,6 @@ $(document).ready(function() {
   let totalSlides = $('div.slide').length;
   let slider = $('.slides');
   let slideTime = 5000;
-  let screenWidth = $(document).width();
   let pos = 0;
 
   text();
@@ -11,6 +10,7 @@ $(document).ready(function() {
   setInterval(counter, slideTime);
 
   function slideRight() {
+    let screenWidth = $(document).width();
       text()
     slider.css('left', -(pos * screenWidth));
     pos++
